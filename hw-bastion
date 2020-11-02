@@ -1,0 +1,8 @@
+#подключение по ssh к someinternalhost из локальной машины через бастион-хост
+ssh -i ~/.ssh/appuser appuser@35.189.199.91 'ssh 10.132.0.4' 
+
+#подключение по ssh к someinternalhost из локальной машины через бастион-хост по алиасу
+touch ~/.bash_aliases
+nano ~/.bash_aliases
+
+alias someinternalhost="ssh -i ~/.ssh/appuser appuser@35.189.199.91 'ssh 10.132.0.4'"
